@@ -74,6 +74,6 @@ end
 
 list_html = html_lines.join("\n") + "\n"
 
-tmpl.sub!('<div class="content publist"/>', '<div class="content publist">' + list_html + '</div>')
+tmpl.sub!('<div class="content publist" />', '<div class="content publist">' + list_html + '</div>')
 
 print tmpl
