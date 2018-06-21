@@ -13,10 +13,10 @@ function head(lang, path, docroot)
            '  <link rel="canonical" href="http://21robot.org/' + path + '">' +
            '  <link href="' + docroot + 'images/torobo.ico" rel="SHORTCUT ICON">' +
            '  <link class="_common_css" rel="stylesheet" type="text/css" media="all" href="' + docroot + 'css/torobo.css" />' +
-           '  <link id="www.researchmap.jp_style" rel="stylesheet" href="http://api.researchmap.jp/css/widget/style.css" type="text/css">' +
-           '  <link id="www.researchmap.jp_error" rel="stylesheet" href="http://api.researchmap.jp/css/widget/error/style.css" type="text/css">' +
-           '  <link id="www.researchmap.jp_template4" rel="stylesheet" href="http://api.researchmap.jp/css/widget/4/style.css" type="text/css">' +
-           '  <link id="www.researchmap.jp_template3" rel="stylesheet" href="http://api.researchmap.jp/css/widget/3/style.css" type="text/css">'
+           '  <link id="www.researchmap.jp_style" rel="stylesheet" href="https://api.researchmap.jp/css/widget/style.css" type="text/css">' +
+           '  <link id="www.researchmap.jp_error" rel="stylesheet" href="https://api.researchmap.jp/css/widget/error/style.css" type="text/css">' +
+           '  <link id="www.researchmap.jp_template4" rel="stylesheet" href="https://api.researchmap.jp/css/widget/4/style.css" type="text/css">' +
+           '  <link id="www.researchmap.jp_template3" rel="stylesheet" href="https://api.researchmap.jp/css/widget/3/style.css" type="text/css">'
            ;
 
     document.write(html);
