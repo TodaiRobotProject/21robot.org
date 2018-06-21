@@ -126,6 +126,19 @@ function match(path, current)
     return true;
 }
 
+function eq_path(path, current)
+{
+    if (path.length != current.length) {
+        return false;
+    }
+    for (var i = 0; i < path.length; ++i) {
+        if (path[i] != current[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function menu_itr(is_root, items, node, current, docroot)
 {
     html = '';
@@ -134,8 +147,10 @@ function menu_itr(is_root, items, node, current, docroot)
         next = node.concat([items[i]["name"]]);
 
         if (is_root && i == 0) {
+            active = eq_path(next, current) ? "highlight" : "hover_highlight";
+
             html += '<div class="menu_top_page_robot">' +
-                    '  <a href="' + docroot + items[0]["path"] + '" class="menu_top_public menulink highlight menu_top_page_href">' + 
+                    '  <a href="' + docroot + items[0]["path"] + '" class="menu_top_public menulink ' + active + ' menu_top_page_href">' + 
                     '    <img class="icon" src="' + docroot + 'images/right_arrow.gif" alt="" />' + items[0]["name"] + 
                     '  </a>' +
                     '</div>';
@@ -145,7 +160,7 @@ function menu_itr(is_root, items, node, current, docroot)
                                                                 : "right_arrow.gif")
                                         : "dot.gif";
             klass = is_root ? "menu_top_public" : "menu_public";
-            active = (next == current) ? "highlight _menu_active" : "";
+            active = eq_path(next, current) ? "highlight _menu_active" : "";
             depth = is_root ? "" : (' style="margin-left:' + (15 * node.length) + 'px;"');
 
             html += '<a class="link menulink ' + klass + ' nowrap ' + active + ' hover_highlight" href="' + docroot + items[i]["path"] + '"' + depth + '>' +
