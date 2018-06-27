@@ -93,7 +93,7 @@ function menu(tree, current, docroot)
             '                          <td class="th_21robot_content">' +
             '                            <div class="content">' +
             '                              <div class="outerdiv">';
-    close = '                              </div>' +
+    cloze = '                              </div>' +
             '                            </div>' +
             '                          </td>' +
             '                        </tr>' +
@@ -110,7 +110,7 @@ function menu(tree, current, docroot)
             '  </table>' +
             '</div>';
 
-    document.write(open + menu_itr(true, tree, [], current, docroot) + close);
+    document.write(open + menu_itr(true, tree, [], current, docroot) + cloze);
 }
 
 function match(path, current)
