@@ -71,6 +71,7 @@ var menu_j = [
             "children": [{"name": "プロジェクトメンバー", "path": "research_activities/cooperation_platform/members.html"}]},
          {"name": "研究成果",   "path": "research_activities/research_accomplishments/index.html"}]},
      {"name": "これまでの歩み", "path": "progress.html"},
+     {"name": "データセット",   "path": "dataset.html"},
      //{"name": "FAQ",            "path": "FAQ.html"},
      {"name": "お問い合わせ",   "path": "contact.html"}
 ];
